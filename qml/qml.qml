@@ -10,6 +10,7 @@ Rectangle {
 
     Column{
         spacing : 2
+
         EditLine
         {
         }
@@ -18,7 +19,9 @@ Rectangle {
             spacing: 20
             Button{
                 text: "Ajouter"
-                onClicked: Context.sendActionToCpp("ajouterLigne", "bach;mine;17")
+                onClicked: {
+                    Context.sendActionToCpp("ajouterLigne", "bach;mine;17")
+                }
             }
             Button{
                 text: "Modifier"
@@ -36,13 +39,12 @@ Rectangle {
             width : 400
             height : 400
             model: UnModelARenseigner
-            delegate : Rectangle{
-                width : 100
-                height : 20
+            delegate : MonDelegate {
+                property string lesDonnees : modelData
+                onLesDonneesChanged : {
+                    console.log( "lesDonnees = "+ lesDonnees )
+                }
             }
         }
     }
-
-    //        color : "papayawhip"
-    //        border{width : 1; color : "papayawhip"}
 }

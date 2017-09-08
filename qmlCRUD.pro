@@ -13,9 +13,7 @@ HEADERS += \
 
 DISTFILES += \
     qml/qml.qml \
-    qml/temp.js \
-    qml/MonConteneur.qml \
     qml/EditLine.qml \
-    qml/ordreComposant.qml \
-    qml/RectTemp.qml \
+    qml/Rect_A.qml \
+    qml/RectField_A.qml \
     qml/MonDelegate.qml
