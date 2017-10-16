@@ -2,9 +2,12 @@ import QtQuick 2.0
 import QtQuick.Controls 1.4 //TextFields
 
 Item {
-//    property alias champNom : idNom.text
+    property alias champNom : idNom.text
+    property alias champPrenom : idPrenom.text
+    property alias champAge : idAge.text
+
     height : 60
-    width : 400 // à commenter temporairement
+    width : 400
 
     Rectangle{
         Row {
@@ -19,6 +22,7 @@ Item {
                 id : idPrenom
             }
             RectField_A{
+                width : 60
                 id : idAge
             }
         }

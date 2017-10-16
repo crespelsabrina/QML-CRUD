@@ -4,8 +4,12 @@ import QtQuick.Controls 1.4 //TextFields
 Item {
     id : root
 
+    property string champNom
+    property string champPrenom
+    property int    champAge
+
     height : 40
-    width : 400 // à supprimer
+    width : 400
 
     Rectangle{
         Row {
@@ -13,13 +17,14 @@ Item {
             width : 400
             height : 40
             Rect_A{
-                text : "root.champNom"
+                text : root.champNom
             }
             Rect_A{
-                text : "root.champPrenom"
+                text : root.champPrenom
             }
             Rect_A{
-                text : "root.champAge"
+                width : 60
+                text : root.champAge
             }
         }
     }
